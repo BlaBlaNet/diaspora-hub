@@ -1,54 +1,40 @@
-diaspora-hub
-============
+# The-Federation.info
 
-(Unofficial) statistics hub for The Federation (diaspora*, Friendica and Redmatrix).
+Statistics hub and node list for The Federation (diaspora*, Friendica, Hubzilla/Redmatrix).
 
-Note: The Federation is NOT an official term from any of these projects. Credit about where it was first used coming.. :)
+## Requirements
 
-Check information and how to add your instance: http://the-federation.info
+* Node 4.x
+* Python 3.x
 
-Database creation
-=================
-
-Something like this (MariaDB/MySQL example):
-
-    create database diasporahub;
-    create user diasporahub@localhost identified by 'putnicepasswordhere';
-    grant all on diasporahub.* to diasporahub@localhost;
-
-Copy src/config.js.example to src/config.js and edit proper values there.
-
-Installation
-============
+## Installation
 
 Node stuff;
 
     npm install
     
-Python stuff (2.x required);
+No Python dependencies except core Python 3.x standard library.
 
-    pip install -r python-requirements.txt
+## Configuration
 
-Running
-=======
+Copy `src/config.js.example` to `src/config.js` and edit proper values there.
 
-Make sure correct Python virtualenv is active, if any. Then;
+## Running
 
     node src/app.js
 
-Author
-======
+## We need data
 
-[Jason Robinson](https://github.com/jaywink)
+Things wont look nice without any data, so register a node, for example this in a browser:
 
-[Me on diaspora*](https://iliketoast.net/u/jaywink)
+    http://127.0.0.1:4730/register/iliketoast.net
 
-Like this?
-==========
+Check the front page and there should be a node listed.
 
-Please donate via the options at the end of [the hub page](http://the-federation.info).
+## Author
 
-License
-=======
+Jason Robinson / @jaywink / https://jasonrobinson.me / https://iliketoast.net/u/jaywink
+
+## License
 
 AGPLv3
